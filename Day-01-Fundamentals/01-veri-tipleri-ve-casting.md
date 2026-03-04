@@ -131,6 +131,58 @@ Yani
 **Java'da `short`, `byte` veya `char` tipleriyle matematiksel bir işlem (`+`, `-`, `*`, `/`) yaptığın anda, Java sonucu otomatik olarak `int` (32 bitlik) yapar.**
 
 
+## Lab: Veri Tipleri ve Casting Sınavı
+
+** Soru 1: Aşağıdaki kodda bir hata var mı? Varsa hangi satırda ve neden? Eğer yoksa ekrana ne yazdırır?** 
+
+```java
+int sayi1 = 100;
+byte sayi2 = 50;
+sayi2 = sayi1 + 10;
+System.out.println(sayi2);
+```
+<details>
+<summary><b>👉 Cevabı Görmek İçin Tıkla</b></summary>
+
+Cevap:`sayi1 + 10` işlemi teknik olarak bir `int` üretir. Sen bunu `byte` olan `sayi2`'ye atamaya çalıştın. Derleyici hemen **"Incompatible Types" (Uyumsuz Tipler)** uyarısını yapıştırır.
+</details>
+
+
+
+**Soru 2: Bu kod bloğu derlenir mi? Çalışırsa ekrana ne yazar? (İpucu: `+=` operatörünün gizli gücünü hatırla!)**
+
+```java
+byte b = 10;
+b += 120;
+System.out.println(b);
+```
+<details>
+<summary><b>👉 Cevabı Görmek İçin Tıkla</b></summary>
+
+Cevap:
+* `byte` en fazla 127 tutabilir.
+  
+* 10 + 120 = 130 eder.
+
+* 127'den sonra sayı başa döner: 128 -> -128, 129 -> -127, 130 -> -126.
+
+* `+=` kullandığın için Java hata vermedi (zorla sığdırdı), ama değer **"taşarak"** negatif tarafa geçti.
+</details>
+
+
+
+**Soru 3: Aşağıdaki kodun çıktısı nedir?**
+
+```java
+char karakter = 'A'; // ASCII değeri 65
+int sonuc = karakter + 5;
+System.out.println(sonuc);
+```
+<details>
+<summary><b>👉 Cevabı Görmek İçin Tıkla</b></summary>
+
+Cevap:`char` (A=65) ile bir `int` (5) toplandığında, Java karakteri sayısal değerine dönüştürür ve sonuç `int` olur. 65 + 5 = 70.
+</details>
 
 
 
