@@ -71,8 +71,8 @@ Diyelim ki bir `String` veya bir `Dizi (Array)` oluşturdun.
 Referans tiplerde en çok buradan soru gelir:
 
 ```java
-String s1 = new String("Gökyüzü");
-String s2 = new String("Gökyüzü");
+String s1 = new String("Gokyuzu");
+String s2 = new String("Gokyuzu");
 
 System.out.println(s1 == s2);      // FALSE! (Çünkü adresler  farklı)
 System.out.println(s1.equals(s2)); // TRUE! (Çünkü  içerik aynı)
