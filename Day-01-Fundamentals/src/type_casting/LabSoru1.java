@@ -4,7 +4,7 @@ public class LabSoru1 {
         int sayi1 = 100;
         byte sayi2 = 50;
         
-        System.out.println("Başlangıç değerleri -> sayi1: " + sayi1 + ", sayi2: " + sayi2);
+        System.out.println("Baslangic degerleri -> sayi1: " + sayi1 + ", sayi2: " + sayi2);
 
         // AŞAĞIDAKİ SATIR DERLEME HATASI (Compile Error) VERİR!
         // (Hatayı görmek için başındaki '//' işaretlerini silip kodu çalıştırmayı dene)
@@ -17,6 +17,6 @@ public class LabSoru1 {
         
         sayi2 = (byte) (sayi1 + 10);
         
-        System.out.println("İşlem sonrası sayi2'nin yeni değeri: " + sayi2);
+        System.out.println("İslem sonrasi sayi2'nin yeni degeri: " + sayi2);
     }
 }
